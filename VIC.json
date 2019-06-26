@@ -1,0 +1,27 @@
+{
+  "module":{
+    "name":"altera_vic",
+    "version":"18.1",
+    "parameters":[
+     {"name":"AUTO_DEVICE", "def":"10CL016YU256C8G"},
+     {"name":"AUTO_DEVICE_FAMILY", "def":"Cyclone 10 LP"},
+     {"name":"AUTO_DEVICE_SPEEDGRADE", "def":"8"},
+     {"name":"DAISY_CHAIN_ENABLE", "def":"0"},
+     {"name":"INTERRUPT_LATENCY_CYCLES", "def":"2"},
+     {"name":"NUMBER_OF_INT_PORTS", "def":"16"},
+     {"name":"OVERRIDE_INTERRUPT_LATENCY", "def":"false"},
+     {"name":"RIL_WIDTH", "def":"4"}
+    ]
+  },
+  "hw":[
+    {
+      "interface":"avalon_slave",
+      "name":"csr_access",
+      "parameters":[
+        {"signal":"address", "name":"SPAN", "value":"8"},
+        {"signal":"read_data", "name":"BIT_WIDTH", "value":"32"},
+        {"signal":"write_data", "name":"BIT_WIDTH", "value":"32"}
+      ]
+    }
+  ]
+}
